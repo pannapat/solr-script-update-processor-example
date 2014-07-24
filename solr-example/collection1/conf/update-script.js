@@ -1,5 +1,4 @@
 function processAdd(cmd) {
-  
   doc = cmd.solrDoc;  // org.apache.solr.common.SolrInputDocument
   
   var d1 = new Date(parseInt(doc.getFieldValue("lastUpdateTime")));
@@ -11,7 +10,6 @@ function processAdd(cmd) {
   firstCreateTime = d2.toISOString();
   doc.setField("firstCreateTime",firstCreateTime);
   logger.info("update-script#processAdd: firstCreateTime=" + firstCreateTime);
-  
 }
 
 function processDelete(cmd) {
